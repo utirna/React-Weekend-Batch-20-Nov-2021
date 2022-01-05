@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-1 CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /*1. download font
+      2. set font in CSS
+      3. use the font*/
+      @font-face {
+        font-family: myFont;
+        src: url(./fonts/Shizuru/Shizuru-Regular.ttf);
+      }
+
+      @font-face {
+        font-family: myFont2;
+        src: url(./fonts/Vujahday_Script/VujahdayScript-Regular.ttf);
+      }
+
+      @font-face {
+        font-family: roboto;
+        src: url(./fonts/Roboto/Roboto-Medium.ttf);
+      }
+
+      body {
+        font-family: roboto;
+      }
+
+      .text {
+        font-size: 1.25rem;
+        font-weight: normal;
+        /* font-style: italic; */
+        font-family: myFont;
+      }
+      .text-2 {
+        font-size: 1.25rem;
+        font-weight: normal;
+        /* font-style: italic; */
+        font-family: myFont2;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">1234567890</p>
+    <p class="text-2">1234567890</p>
+
+    <h1>Hello</h1>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-1 CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      @font-face {
+        font-family: myFont;
+        src: url(./fonts/Shizuru/Shizuru-Regular.ttf);
+      }
+      .block {
+        width: 50vw;
+        height: 50vh;
+        /* background-color: red; */
+        margin: auto;
+        margin-top: 15rem;
+        /* box-shadow: 50px 50px 0px 100px gray; */
+      }
+
+      .text {
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: transparent;
+        text-shadow: 0px 0px 5px gray;
+      }
+      .text:hover {
+        color: gray;
+        text-shadow: 0px 0px 0px gray;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="block">
+      <p class="text">Confluence</p>
+    </section>
+  </body>
+</html>

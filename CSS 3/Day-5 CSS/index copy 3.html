@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-1 CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .article {
+        width: 50vw;
+        height: 20vh;
+        background-color: rgb(186, 248, 186);
+        border: 2px solid black;
+      }
+      .parent {
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around; /* main axis*/
+
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="parent">
+      <article class="article">Flex Item-1</article>
+      <article class="article">Flex Item-2</article>
+      <article class="article">Flex Item-3</article>
+      <article class="article">Flex Item-4</article>
+    </section>
+  </body>
+</html>

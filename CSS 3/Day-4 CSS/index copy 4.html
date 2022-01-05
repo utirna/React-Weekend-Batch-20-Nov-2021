@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-1 CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      @font-face {
+        font-family: myFont;
+        src: url(./fonts/Shizuru/Shizuru-Regular.ttf);
+      }
+      .block {
+        width: 50vw;
+        height: 50vh;
+        /* background-color: red; */
+        margin: auto;
+        margin-top: 15rem;
+        /* box-shadow: 50px 50px 0px 100px gray; */
+      }
+
+      .btn {
+        padding: 0.5rem 6rem;
+        border: 1px solid green;
+        font-size: 2rem;
+        color: green;
+
+        box-shadow: 20px 0px 5px 0px green, -20px 0px 5px 0px brown,
+          0px -20px 0px 0px darkblue, 0px 20px 0px 0px darkmagenta;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="block">
+      <button class="btn">CLICK</button>
+    </section>
+  </body>
+</html>

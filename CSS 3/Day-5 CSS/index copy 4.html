@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day-1 CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding-inline-start: 0;
+      }
+      .container {
+        height: 100vh;
+        background-color: pink;
+      }
+      .menu {
+        list-style: none;
+        display: flex;
+        padding: 1rem;
+        background-color: pink;
+      }
+      .menu-item {
+        border: 1px solid black;
+        margin: 0px 0.5rem;
+        padding: 0.5rem 1.5rem;
+        background-color: white;
+      }
+      .main-section {
+        display: flex;
+        justify-content: space-evenly;
+
+        padding: 1rem;
+        background-color: lightgreen;
+      }
+      .main-section-child {
+        height: 50vh;
+        width: 45vw;
+        border: 1px solid black;
+        background-color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .our-clients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        background-color: lightsalmon;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <nav>
+          <ul class="menu">
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main-section">
+        <section class="main-section-child">Section-1</section>
+        <section class="main-section-child">Section-2</section>
+      </section>
+      <section class="our-clients">Our Client List</section>
+      <footer>
+        <nav>
+          <ul class="menu">
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+            <li class="menu-item">Home</li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

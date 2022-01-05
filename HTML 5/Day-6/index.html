@@ -1,0 +1,35 @@
+<html>
+  <head> </head>
+  <body>
+    <fieldset>
+      <legend>Sign Up</legend>
+      <form action="/save-new-user" method="post" enctype="multipart/form-data">
+        <div>
+          <label for="">Full Name</label>
+          <input type="text" placeholder="enter full name eg. ram" />
+        </div>
+        <div>
+          <label for="">Select Your Class</label>
+          <select name="userClass">
+            <option value="-1">--- select a class ---</option>
+            <optgroup label="SSC">
+              <option value="8">8th</option>
+              <option value="9">9th</option>
+              <option value="10" selected>10th</option>
+            </optgroup>
+            <optgroup label="HSC">
+              <option value="11">11th</option>
+              <option value="12">12th</option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <label for="">Address</label>
+          <textarea cols="60" rows="5">At/Post,</textarea>
+        </div>
+        <input type="file" multiple />
+        <button>Sign Up</button>
+      </form>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+  <head> </head>
+  <body>
+    <fieldset>
+      <legend>Sign Up</legend>
+      <form>
+        <div>
+          <label for="">Full Name*</label>
+          <input
+            type="text"
+            placeholder="enter full name eg. ram"
+            value="Mr."
+          />
+        </div>
+        <div>
+          <label for="">Enter Email ID*</label>
+          <input type="email" placeholder="eg. abc@xyz.com" required />
+        </div>
+
+        <div>
+          <label for="">Enter Mobile*</label>
+          <input type="number" placeholder="enter mobile number" required />
+        </div>
+        <div>
+          <label for="">User gender</label>
+          <div>
+            <label for="">Male</label>
+            <input type="radio" name="gender" />
+
+            <label for="">Female</label>
+            <input type="radio" name="gender" checked />
+
+            <label for="">Other</label>
+            <input type="radio" name="gender" />
+          </div>
+        </div>
+        <div>
+          <label for="">Select Course Topics</label>
+          <div>
+            <label for="">HTML5</label>
+            <input type="checkbox" name="gender" checked disabled />
+
+            <label for="">CSS3</label>
+            <input type="checkbox" name="gender" checked disabled />
+
+            <label for="">JS</label>
+            <input type="checkbox" name="gender" />
+
+            <label for="">React</label>
+            <input type="checkbox" name="gender" />
+          </div>
+        </div>
+        <div>
+          <label for="">DOB</label>
+          <input type="date" />
+        </div>
+
+        <div>
+          <label for="">DOB</label>
+          <input type="time" />
+        </div>
+        <input type="reset" value="Clear" />
+        <button>Submit</button>
+      </form>
+
+      <p>Note: * values are mandatory</p>
+    </fieldset>
+  </body>
+</html>

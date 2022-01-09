@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+    body{
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      /* justify-content: center; */
+    }
+    .main-section{
+      width: 100vw;
+      height: 40vh;
+      background-color: rgb(248, 79, 164);
+      position: relative;
+    }
+    .main-sample{
+      width: 100vw;
+      height: 40vh;
+      background-color: rgb(255, 10, 202);
+      position: relative;
+    }
+    .skew{
+      width: inherit;
+      height: 20vh;
+      background-color: rgb(248, 79, 164);
+      transform: skewY(10deg);
+      position: absolute;
+      top: 0;
+      /* z-index: -1; */
+    }
+    .skew-2{
+      width: inherit;
+      height: 20vh;
+      background-color: rgb(248, 79, 164);
+      transform: skewY(-10deg);
+      position: absolute;
+      top: 0;
+      /* z-index: -1; */
+    }
+    </style>
+  </head>
+  <body>
+    <section class="main-sample"></section>
+    <section class="main-section">
+      <section class="skew"></section>
+      <section class="skew-2"></section>
+    </section>
+    
+    </nav>
+  </body>
+</html>
+

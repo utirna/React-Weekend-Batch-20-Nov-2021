@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      .section {
+        width: 40vw;
+        height: 15vh;
+        background-color: lightcoral;
+        border: 1px solid black;
+        font-size: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .pos-2 {
+        position: absolute;
+        /* top: 0; */
+        /* bottom: 0;
+        right: 0; */
+
+        background-color: darkmagenta;
+        color: white;
+        z-index: 5;
+      }
+      .pos-3 {
+        position: relative;
+        z-index: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section">Section 1</section>
+    <section class="section pos-2">Section 2</section>
+    <section class="section pos-3">Section 3</section>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 200vh;
+      }
+      .grand-parent {
+        width: 80vw;
+        height: 80vh;
+        background-color: rgb(112, 112, 23);
+        margin-top: 4rem;
+        padding-top: 4rem;
+      }
+      .parent {
+        width: 50vw;
+        height: 50vh;
+        background-color: rgb(78, 252, 130);
+        padding-top: 4rem;
+        position: relative;
+      }
+      .child {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        /* bottom: 0; */
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: rgb(60, 0, 156);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .block {
+        width: 100vw;
+        height: 10vh;
+        background-color: red;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+      }
+      .menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+      }
+      .menu-item {
+        color: white;
+        border-bottom: 1px solid;
+        margin: 0 1.5rem;
+        padding: 0 1.5rem;
+        cursor: pointer;
+      }
+      .bottom-button {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="block">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">Home</li>
+          <li class="menu-item">Home</li>
+          <li class="menu-item">Home</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="bottom-button"></section>
+
+    <section class="grand-parent">
+      <section class="parent">
+        <section class="child">X</section>
+      </section>
+    </section>
+  </body>
+</html>

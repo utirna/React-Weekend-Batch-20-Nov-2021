@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+    body{
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    section{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+
+      /* states */
+      /* transition: ; */
+      transition-property:  background-color,transform;
+      transition-duration: 1s,10s;
+      transform: perspective(100px);
+      
+      /* stateless animation*/
+      /* animation: ; */
+      
+    }
+
+    section:hover{
+      background-color: green;
+
+      transform:  perspective(100px) rotateY(-360deg);
+    }
+    </style>
+  </head>
+  <body>
+
+    <section>HELLo</section>
+    
+    </nav>
+  </body>
+</html>
+

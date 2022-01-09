@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .card {
+        width: 30vw;
+        height: 250px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgreen;
+
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .offer {
+        font-size: 2rem;
+        font-weight: bold;
+        color: darkgreen;
+      }
+      .card:hover .offer-prices {
+        bottom: 0px;
+      }
+      .offer-prices {
+        position: absolute;
+        bottom: -50px;
+        border: 1px solid black;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        font-size: 1.5rem;
+        background-color: darkmagenta;
+        color: white;
+        padding: 0.5rem;
+        transition-property: bottom;
+        transition-duration: 0.5s;
+      }
+      .off-prices-text {
+        text-decoration: line-through;
+        font-size: 1.2rem;
+      }
+      .real-prices {
+        font-size: 1.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <section class="offer">Off 50%</section>
+      <section class="offer-prices">
+        <span class="off-prices-text">2000/-</span>
+        <span class="real-prices">1000-/</span>
+      </section>
+    </section>
+    <section class="card">
+      <section class="offer">Off 50%</section>
+      <section class="offer-prices">
+        <span class="off-prices-text">2000/-</span>
+        <span class="real-prices">1000-/</span>
+      </section>
+    </section>
+    <section class="card">
+      <section class="offer">Off 50%</section>
+      <section class="offer-prices">
+        <span class="off-prices-text">2000/-</span>
+        <span class="real-prices">1000-/</span>
+      </section>
+    </section>
+  </body>
+</html>

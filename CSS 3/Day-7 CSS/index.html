@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      @font-face {
+        font-family: roboto;
+        src: url(fonts/Roboto/Roboto-Regular.ttf);
+      }
+      body{
+        font-family: roboto;
+      }
+      .main-header{
+        display: flex;
+        padding: 0.5rem ;
+     
+        align-items: center;
+        background-color: #7952B3;
+        color: white;
+      }
+      .brand-logo{
+        width: 5vw;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+
+      }
+      .nav-bar{
+        width: 95vw;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+      .menu{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        padding: 0.5rem;
+        align-items: center;
+      }
+      .menu-item{
+        margin: 0 0.4rem;
+        text-transform: capitalize;
+      }
+      .btn-download{
+        border: 2px solid #FFDB98;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background-color: transparent;
+        color: #FFDB98;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .btn-download:hover{
+        background-color: #FFDB98;
+        color:  #7952B3;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="main-header">
+      <div class="brand-logo"><h5>BS5</h5></div>
+      <nav class="nav-bar">
+        <ul class="menu">
+          <li class="menu-item">home</li>
+          <li class="menu-item">docs</li>
+          <li class="menu-item">examples</li>
+          <li class="menu-item">themes</li>
+        </ul>
+        <ul  class="menu">
+          <li class="menu-item">icon-1</li>
+          <li class="menu-item">icon-1</li>
+          <li class="menu-item">icon-1</li>
+          <li class="menu-item"><button class="btn-download">Download</button></li>
+        </ul>
+      </nav>
+    </header>
+    
+    </nav>
+  </body>
+</html>

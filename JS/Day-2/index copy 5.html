@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-1</title>
+  </head>
+  <body>
+    <script>
+      var numberOne = 10;
+      function add(vOne) {
+        var result = vOne + 50;
+
+        function inc() {
+          result = result + 1;
+          return result;
+        }
+        return inc;
+      }
+
+      var fun = add(numberOne);
+
+      var output = fun();
+      fun();
+      var output2 = fun();
+
+      console.log(output);
+      console.log(output2);
+    </script>
+  </body>
+</html>

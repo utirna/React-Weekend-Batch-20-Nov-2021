@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+    <style>
+      .changeText {
+        color: red;
+        background-color: rgb(168, 91, 240);
+        font-size: 2.5rem;
+      }
+      .blink {
+        animation: blink 0.1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="id-change-text" class="blink">Admin Name</h1>
+
+    <script>
+      //DOM
+      var changeTextId = document.querySelector("#id-change-text");
+      changeTextId.innerHTML = "Hello";
+
+      //style
+      /*changeTextId.style.color = "red";
+      changeTextId.style.backgroundColor = "green";
+      changeTextId.style.fontSize = "2rem";*/
+
+      //class
+      changeTextId.classList.add("changeText");
+
+      setTimeout(function () {
+        changeTextId.classList.remove("blink");
+      }, 5 * 1000);
+
+      //document.querySelectorAll();
+    </script>
+  </body>
+</html>

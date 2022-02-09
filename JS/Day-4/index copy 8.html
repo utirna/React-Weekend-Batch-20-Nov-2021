@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+  </head>
+  <body>
+    <button onclick="incCounterFun()">Inc Count</button>
+    <button onclick="decCounterFun()">Dec Count</button>
+    <p>This Counter <span id="counter">-</span></p>
+    <script>
+      //DOM
+      var counterId = document.querySelector("#counter");
+      var count = 0;
+
+      function incCounterFun() {
+        counterId.innerHTML = ++count;
+      }
+
+      function decCounterFun() {
+        counterId.innerHTML = --count;
+      }
+    </script>
+  </body>
+</html>

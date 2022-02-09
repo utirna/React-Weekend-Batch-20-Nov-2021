@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        background-image: url("./images/image-1.jpg");
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login {
+        width: 70vw;
+        height: 60vh;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgb(168, 165, 165);
+        background-color: rgba(255, 95, 215, 0.158);
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* transform: perspective(800px); */
+        /* transition: transform 3s; */
+      }
+
+      .login:hover .login-form {
+        transform: translateX(-500px);
+      }
+
+      .login:hover .login-form-signup {
+        transform: translateX(0px);
+      }
+
+      .login-form {
+        width: 70%;
+        display: flex;
+
+        flex-direction: column;
+        transition: transform 1s;
+      }
+
+      .login-form-signup {
+        width: 70%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(500px);
+        transition: transform 1s;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        font-size: 1.3rem;
+        color: rgb(78, 0, 151);
+      }
+      .form-group input {
+        outline: 0;
+        border: 1px solid gray;
+        width: 70%;
+        margin: 0 2rem;
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+        border-radius: 2rem;
+        background-color: rgba(255, 255, 255, 0.568);
+        transition: width 0.5s;
+        transform: translateZ(100px);
+      }
+
+      .form-group input:focus {
+        width: 80%;
+      }
+
+      .form-submit-button {
+        outline: 0;
+        border: 2px solid rgb(78, 0, 151);
+        margin: 0 1rem;
+        padding: 0.7rem 2rem;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        background-color: transparent;
+        color: rgb(78, 0, 151);
+        font-weight: bold;
+        box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.534);
+        cursor: pointer;
+        transition: background-color 0.5s;
+      }
+      .form-submit-button:hover {
+        background-color: rgba(255, 255, 255, 0.336);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="login">
+        <form action="" class="login-form">
+          <div class="form-group">
+            <label for="">User Name</label>
+            <input type="text" placeholder="Enter User Name" />
+          </div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <input type="text" placeholder="Enter Password" />
+          </div>
+          <button class="form-submit-button">Submit</button>
+        </form>
+
+        <form action="" class="login-form-signup">
+          <div class="form-group">
+            <label for="">Email Id</label>
+            <input type="text" placeholder="Enter User Name" />
+          </div>
+          <div class="form-group">
+            <label for="">New sPassword</label>
+            <input type="text" placeholder="Enter Password" />
+          </div>
+          <button class="form-submit-button">Sign Up</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

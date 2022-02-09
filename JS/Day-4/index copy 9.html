@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+  </head>
+  <body>
+    <input type="number" id="number" />
+    <button onclick="checkEvenOdd()">Calculate</button>
+    <p id="output-text"></p>
+    <script>
+      //DOM
+      var number = document.querySelector("#number");
+      var outputText = document.querySelector("#output-text");
+
+      number.value = 0;
+
+      function checkEvenOdd() {
+        var inputValue = Number(number.value);
+
+        if (inputValue % 2 === 0) {
+          outputText.innerHTML = "Given Number id Even";
+          outputText.style.color = "green";
+        } else {
+          outputText.innerHTML = "Given Number id odd";
+          outputText.style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-1</title>
+  </head>
+  <body>
+    <script>
+      var productList = [
+        {
+          id: 1,
+          name: "Product One",
+          price: 40000,
+          quantity: 8,
+          description: "this is description",
+          return_policy: true,
+        },
+        {
+          id: 2,
+          name: "Product Two",
+          price: 45000,
+          quantity: 10,
+          description: "this is description",
+          return_policy: true,
+        },
+        {
+          id: 3,
+          name: "Product Three",
+          price: 35000,
+          quantity: 8,
+          description: "this is description",
+          return_policy: false,
+        },
+        {
+          id: 4,
+          name: "Product Four",
+          price: 25000,
+          quantity: 6,
+          description: "this is description",
+          return_policy: true,
+        },
+      ];
+
+      // create/add
+      //push
+      productList.push({
+        id: 5,
+        name: "Product Five",
+        price: 15000,
+        quantity: 20,
+        description: "this is description",
+        return_policy: false,
+      });
+
+      // update/edit
+
+      // find/search
+      //find
+      var searchId = 2;
+      /*var product = productList.find(function (product) {
+        return product.id === searchId;
+      });
+      
+           console.log(product);
+      */
+
+      //findIndex
+      /*var productIndex = productList.findIndex(function (product) {
+        return product.id === searchId;
+      });
+
+      // delete/remove
+      ////splice
+      productList.splice(productIndex, 1);
+      console.log(productList);
+      */
+
+      //filter
+      /*var returnProductList = productList.filter(function (product) {
+        return product.return_policy !== true;
+      });
+      console.log(returnProductList);*/
+
+      // display
+      //map
+      var newProductList = productList.map(function (product) {
+        return "<h1>" + product.quantity + "</h1>";
+      });
+
+      newProductList = newProductList.join("");
+      console.log(newProductList);
+      //join
+    </script>
+  </body>
+</html>

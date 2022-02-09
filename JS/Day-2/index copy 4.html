@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-1</title>
+  </head>
+  <body>
+    <script>
+      function add(vOne, vTwo, callback) {
+        var result = vOne + vTwo;
+        callback(result);
+      }
+
+      var sub = function (callback) {
+        callback();
+      };
+
+      add(10, 20, function (result) {
+        var newResult = result * 10;
+        console.log(newResult);
+      });
+
+      add(100, 200, function (resultTwo) {
+        var newResultTwo = resultTwo / 5;
+        console.log(newResultTwo);
+      });
+
+      sub(function () {
+        console.log("hello");
+      });
+    </script>
+  </body>
+</html>

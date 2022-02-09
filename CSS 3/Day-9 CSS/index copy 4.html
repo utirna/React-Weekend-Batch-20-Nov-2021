@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .form-control:focus {
+        background-color: lightgreen;
+        color: red;
+      }
+      .form-control:disabled,
+      .form-control:read-only {
+        background-color: rgb(250, 199, 199);
+        border: 0;
+        cursor: not-allowed;
+      }
+
+      .form-control:invalid {
+        background-color: rgb(196, 20, 7);
+      }
+
+      .form-control:valid {
+        background-color: rgb(115, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="form-control" readonly value="deepak" require />
+    <input type="email" class="form-control" require />
+  </body>
+</html>

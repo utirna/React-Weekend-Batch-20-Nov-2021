@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-7</title>
+    <link rel="stylesheet" href="/plugins/fa/css/font-awesome.css" />
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* default */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 25%;
+        border: 3px solid black;
+        height: 20vh;
+      }
+
+      /* laptop */
+      @media screen and (max-width: 900px) and (min-width: 701px) {
+        .item {
+          width: 50%;
+          border-color: red;
+        }
+      }
+
+      /* tablet */
+      @media screen and (max-width: 700px) and (min-width: 551px) {
+        .item {
+          width: 100%;
+          border-color: rgb(93, 56, 255);
+        }
+      }
+
+      /* mobile */
+      @media screen and (max-width: 550px) {
+        .item {
+          width: 100%;
+          border-color: rgb(49, 133, 10);
+          height: 40vh;
+        }
+        .adds {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="item">Section-1</section>
+      <section class="item">Section-2</section>
+      <section class="item">Section-3</section>
+      <section class="item adds">Section-4 Adds</section>
+    </main>
+  </body>
+</html>

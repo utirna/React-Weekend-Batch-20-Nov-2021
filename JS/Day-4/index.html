@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input id="contact-name" type="text" placeholder="Enter Contact Name" />
+      </div>
+      <div>
+        <input
+          id="contact-number"
+          type="number"
+          placeholder="Enter Contact Number"
+        />
+      </div>
+      <button onclick="saveContact(event)">Save</button>
+    </form>
+    <script>
+      //DOM
+      var contactName = document.querySelector("#contact-name");
+      var contactNumber = document.querySelector("#contact-number");
+
+      var contactList = [];
+
+      function saveContact(event) {
+        event.preventDefault();
+
+        var cName = contactName.value;
+        var cNumber = contactNumber.value;
+
+        var contact = {
+          contactName: cName,
+          contactNumber: cNumber,
+        };
+
+        contactList.push(contact);
+
+        console.log(contactList);
+      }
+    </script>
+  </body>
+</html>

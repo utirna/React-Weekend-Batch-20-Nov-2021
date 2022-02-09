@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-4</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <div>
+      <h1>Hello</h1>
+    </div>
+
+    <h1>Hello</h1>
+
+    <p>Hello</p>
+
+    <script>
+      //DOM
+      var h1List = document.getElementsByTagName("h1");
+      var h1 = h1List[2];
+      var h1ListLength = h1List.length;
+
+      for (var index = 0; index < h1ListLength; index++) {
+        h1List[index].innerHTML = "Confluence Infotech";
+      }
+
+      //document.getElementsByClassName()
+      //document.getElementById()
+
+      //document.querySelector();
+      //document.querySelectorAll();
+    </script>
+  </body>
+</html>

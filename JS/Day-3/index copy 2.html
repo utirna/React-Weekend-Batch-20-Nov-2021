@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-1</title>
+  </head>
+  <body>
+    <script>
+      var productList = [
+        {
+          id: 1,
+          name: "Product One",
+          price: 40000,
+          quantity: 8,
+          description: "this is description",
+          return_policy: true,
+        },
+        {
+          id: 2,
+          name: "Product Two",
+          price: 45000,
+          quantity: 10,
+          description: "this is description",
+          return_policy: true,
+        },
+        {
+          id: 3,
+          name: "Product Three",
+          price: 35000,
+          quantity: 8,
+          description: "this is description",
+          return_policy: false,
+        },
+        {
+          id: 4,
+          name: "Product Four",
+          price: 25000,
+          quantity: 6,
+          description: "this is description",
+          return_policy: true,
+        },
+      ];
+      productList.push({
+        id: 5,
+        name: "Product Five",
+        price: 15000,
+        quantity: 20,
+        description: "this is description",
+        return_policy: false,
+      });
+      var searchId = 2;
+
+      var productString = productList
+        .filter(function (product) {
+          return product.return_policy === true;
+        })
+        .map(function (product) {
+          return "<h1>" + product.name + "</h1>";
+        })
+        .join(""); //method chaining
+
+      console.log(productString);
+      //join
+    </script>
+  </body>
+</html>

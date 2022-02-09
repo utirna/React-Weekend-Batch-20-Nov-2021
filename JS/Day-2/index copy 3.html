@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Day-1</title>
+  </head>
+  <body>
+    <script>
+      function add() {
+        console.log("general function/ common function");
+      }
+
+      var sub = function () {
+        console.log("expression function /anonymous function");
+      };
+
+      // add();
+      // sub();
+
+      function div(callback) {
+        callback();
+      }
+
+      div(function () {
+        console.log("inline function/ callback function");
+      });
+
+      // immediately-invoke/call function expression IIFE
+
+      (function () {
+        var abc = 10;
+        console.log("iife");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-6</title>
+  </head>
+  <body>
+    <button onclick="ajax()">Get Data XHR</button>
+    <button onclick="fetchAjax()">Get Data Fetch</button>
+    <h1>Hello</h1>
+    <div id="data"></div>
+
+    <script>
+      // data communication api i.e xhr & fetch
+      var dataId = document.querySelector("#data");
+      /* server <===> client*/
+      // (xhr)xml http request ((ajax) asynchronous javascript and xml)
+      // jsObject ( JSON )
+      function ajax() {
+        // create xhr
+        var xhr = new XMLHttpRequest();
+
+        // open connection
+        //GET, POST, DELETE, PUT, PATCH
+        xhr.open("GET", "/home.html");
+
+        // send request
+        xhr.send();
+
+        // handel request
+
+        xhr.onreadystatechange = function () {
+          // xhr.readyState
+          //step-1 0 init
+          //step-2 1 open connection
+          //step-3 2 send request
+          //step-4 3 receive response
+          //step-5 4 close connection
+
+          // xhr.status
+          // xhr.statusText
+          // xhr.responseText
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              var data = xhr.responseText;
+              dataId.innerHTML = data;
+            }
+          }
+        };
+      }
+
+      // fetch
+      async function fetchAjax() {
+        try {
+          var response = await fetch("/home.html", { method: "GET" });
+          var data = await response.text();
+          dataId.innerHTML = data;
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  </body>
+</html>

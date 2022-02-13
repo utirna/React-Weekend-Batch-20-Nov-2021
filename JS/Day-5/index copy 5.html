@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+  </head>
+  <body>
+    <script>
+      //promise by async
+      async function add(varOne, varTwo) {
+        var result = varOne + varTwo;
+        return result;
+      }
+
+      async function div(varOne, varTwo) {
+        if (varTwo === 0) {
+          var error = {
+            type: "DIV",
+            message: "you cant divide a number by zero",
+          };
+          return Promise.reject(error);
+          // Class.method()  static function
+        } else {
+          var result = varOne / varTwo;
+          return result;
+        }
+      }
+
+      add(50, 10)
+        .then(function (addResult) {
+          return div(addResult, 10);
+        })
+        .then(function (divResult) {
+          console.log(divResult);
+        })
+        .catch(function (error) {
+          switch (error.type) {
+            case "DIV":
+              alert(error.message);
+              break;
+
+            default:
+              alert("unexpected error occur");
+              break;
+          }
+        });
+
+      // async
+    </script>
+  </body>
+</html>

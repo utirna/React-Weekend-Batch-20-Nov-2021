@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-6</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div id="data"></div>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+        </tr>
+      </thead>
+      <tbody id="productListTableTbody">
+        <tr>
+          <td colspan="3">
+            Click to
+            <button onclick="fetchAjax()">Get Data Fetch</button> get the list
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var tbody = document.querySelector("#productListTableTbody");
+      var productList = [];
+
+      async function fetchAjax() {
+        var url = "http://www.api.spas-b.com/api/product-list";
+        var response = await fetch(url);
+        var data = await response.json();
+        productList = data.list;
+        printData();
+      }
+
+      function printData() {
+        tbody.innerHTML = productList
+          .map(function (product, index) {
+            return `<tr>
+                        <td>${index + 1}</td>
+                        <td>${product.product_name}</td>
+                        <td>${product.product_price}</td>
+                      </tr>`;
+          })
+          .join("");
+      }
+    </script>
+  </body>
+</html>

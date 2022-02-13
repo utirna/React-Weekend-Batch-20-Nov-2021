@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+  </head>
+  <body>
+    <input type="text" id="numberOne" />
+    <input type="text" id="numberTwo" />
+    <button onclick="calculateData()">CALC</button>
+
+    <p>Result: <span id="result"></span></p>
+    <script>
+      //promise custom
+      function add(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          var result = varOne + varTwo;
+          resolve(result);
+        });
+      }
+
+      function div(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          if (varTwo === 0) {
+            reject("you cant divide a number by zero");
+          } else {
+            var result = varOne / varTwo;
+            resolve(result);
+          }
+        });
+      }
+
+      var numberOne = document.querySelector("#numberOne");
+      var numberTwo = document.querySelector("#numberTwo");
+      var result = document.querySelector("#result");
+
+      function calculateData() {
+        var inputOneValue = Number(numberOne.value);
+        var inputTwoValue = Number(numberTwo.value);
+
+        add(inputOneValue, inputTwoValue)
+          .then(function (addResult) {
+            return div(addResult, inputTwoValue);
+          })
+          .then(function (divResult) {
+            var text = `(${inputOneValue} + ${inputTwoValue}) / ${inputTwoValue} = ${divResult}`;
+            result.innerHTML = text;
+
+            numberOne.value = "";
+            numberTwo.value = "";
+          })
+          .catch(function (error) {
+            alert(error);
+          });
+      }
+
+      // async
+    </script>
+  </body>
+</html>

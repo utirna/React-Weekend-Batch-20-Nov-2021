@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-6</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <div id="data"></div>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+        </tr>
+      </thead>
+      <tbody id="productListTableTbody">
+        <tr>
+          <td colspan="3">
+            Click to
+            <button onclick="fetchAjax()">Get Data Fetch</button> get the list
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      var tbody = document.querySelector("#productListTableTbody");
+      var productList = [];
+
+      // data ==> add
+      //localStorage.setItem("user", "deepak");
+
+      // data ==> change
+      //localStorage.setItem("user3", "deepak");// add item ot update
+
+      // data ==>read
+      var data = localStorage.getItem("token"); // read a data
+      // if data is key is available we get data else we get null
+      console.log(data);
+
+      // data ==> single delete
+      localStorage.removeItem("user1");
+      // if key is available item will be get remove else ignored
+
+      // data ==> delete all data
+      localStorage.clear();
+    </script>
+  </body>
+</html>

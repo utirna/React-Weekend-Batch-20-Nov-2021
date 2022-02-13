@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+    <style>
+      .table {
+        width: 90%;
+        text-align: center;
+        border-collapse: collapse;
+        margin: 2rem 0;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+      }
+      .table td,
+      .table th {
+        border: 1px solid black;
+        padding: 0.2rem 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <input id="contact-name" type="text" placeholder="Enter Contact Name" />
+      </div>
+      <div>
+        <input
+          id="contact-number"
+          type="number"
+          placeholder="Enter Contact Number"
+        />
+      </div>
+      <button onclick="saveContact(event)">Save</button>
+    </form>
+    <section class="flex">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Contact Name</th>
+            <th>Contact Number</th>
+          </tr>
+        </thead>
+        <tbody id="contact-list-tbody">
+          <tr>
+            <td>1</td>
+            <td>Demo name</td>
+            <td>Demo Number</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <script>
+      //DOM
+      var contactName = document.querySelector("#contact-name");
+      var contactNumber = document.querySelector("#contact-number");
+      var contactListTbody = document.querySelector("#contact-list-tbody");
+
+      var contactList = [];
+
+      function saveContact(event) {
+        event.preventDefault();
+
+        var cName = contactName.value;
+        var cNumber = contactNumber.value;
+
+        var contact = {
+          contactName: cName,
+          contactNumber: cNumber,
+        }; //js Object
+
+        contactList.push(contact); // push jsObject contactList
+
+        var _tableList = contactList
+          .map(function (contact, index) {
+            return `<tr>
+                      <td>${index + 1}</td>
+                      <td>${contact.contactName}</td>
+                      <td>${contact.contactNumber}</td>
+                    </tr>`;
+          })
+          .join(""); //created a dynamic row & convert array to string
+
+        contactListTbody.innerHTML = _tableList;
+      }
+    </script>
+  </body>
+</html>

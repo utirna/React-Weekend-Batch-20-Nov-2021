@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+  </head>
+  <body>
+    <script>
+      //promise custom
+      function add() {
+        return new Promise(function (resolve, reject) {
+          reject("this fails to resolve");
+        });
+      }
+
+      add()
+        .then(function (dataFromPromise) {
+          console.log(dataFromPromise);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      // async
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+  </head>
+  <body>
+    <script>
+      //async await
+      async function add(varOne, varTwo) {
+        var result = varOne + varTwo;
+        return result;
+      }
+
+      async function div(varOne, varTwo) {
+        if (varTwo === 0) {
+          var error = {
+            type: "DIV",
+            message: "you cant divide a number by zero",
+          };
+          return Promise.reject(error);
+          // Class.method()  static function
+        } else {
+          var result = varOne / varTwo;
+          return result;
+        }
+      }
+
+      async function calculation() {
+        try {
+          var addResult = await add(50, 10);
+          var divResult = await div(addResult, 10);
+
+          console.log(divResult);
+        } catch (error) {
+          switch (error.type) {
+            case "DIV":
+              alert(error.message);
+              break;
+
+            default:
+              alert("unexpected error occur");
+              break;
+          }
+        }
+      }
+
+      calculation();
+      console.log("Hello");
+      // async
+    </script>
+  </body>
+</html>

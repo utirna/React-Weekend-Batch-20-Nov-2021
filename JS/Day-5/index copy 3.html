@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS Day-5</title>
+  </head>
+  <body>
+    <script>
+      //promise custom
+      function add(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          var result = varOne + varTwo;
+          resolve(result);
+        });
+      }
+
+      function div(varOne, varTwo) {
+        return new Promise(function (resolve, reject) {
+          if (varTwo === 0) {
+            reject("you cant divide a number by zero");
+          } else {
+            var result = varOne / varTwo;
+            resolve(result);
+          }
+        });
+      }
+
+      add(10, 20)
+        .then(function (addResult) {
+          return div(addResult, 0);
+        })
+        .then(function (divResult) {
+          console.log(divResult);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+      // async
+    </script>
+  </body>
+</html>
